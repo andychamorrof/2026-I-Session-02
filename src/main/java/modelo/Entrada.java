@@ -1,4 +1,5 @@
 package modelo;
+import excepciones.EntradaNoDisponibleException;
 
 public class Entrada {
 
@@ -12,9 +13,17 @@ public class Entrada {
         this.estado = estado;
     }
 
-    public boolean vender() {
+    public boolean vender()
+            throws EntradaNoDisponibleException {
+
+        if (estado.equals("Vendido")) {
+
+            throw new EntradaNoDisponibleException(
+                    "La entrada ya fue vendida");
+        }
 
         estado = "Vendido";
+
         return true;
     }
 

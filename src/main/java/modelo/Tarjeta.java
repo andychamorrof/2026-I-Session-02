@@ -1,4 +1,5 @@
 package modelo;
+import excepciones.DatoInvalidoException;
 
 public class Tarjeta {
 
@@ -10,7 +11,14 @@ public class Tarjeta {
     public Tarjeta(int numero,
                    String nombre,
                    String fecha,
-                   String cvv) {
+                   String cvv)
+            throws DatoInvalidoException {
+
+        if (numero <= 0) {
+
+            throw new DatoInvalidoException(
+                    "Número de tarjeta inválido");
+        }
 
         this.numero = numero;
         this.nombre = nombre;
