@@ -1,25 +1,21 @@
 package modelo;
 
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 public class Concierto {
-
     private String nombre;
-    private String fecha;
+    private Date fecha;
+    private List<Zona> zonas; 
 
-    private ArrayList<Zona> zonas;
-
-    public Concierto(String nombre,
-                     String fecha) {
-
+    public Concierto(String nombre, Date fecha){
         this.nombre = nombre;
         this.fecha = fecha;
-
-        zonas = new ArrayList<>();
+        this.zonas = new ArrayList<>();
     }
 
-    public boolean agregarZona(Zona zona) {
+    public boolean agregarZona(String nombre){return true;}
 
-        return zonas.add(zona);
-    }
+    public boolean eliminarZona(String nombre){return true;}
 }

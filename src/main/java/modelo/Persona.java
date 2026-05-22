@@ -1,5 +1,7 @@
 package modelo;
 
+import excepciones.EntradaLimiteException;
+
 public abstract class Persona {
 
     protected String nombres;
@@ -29,4 +31,6 @@ public abstract class Persona {
     public boolean anularVenta() {
         return true;
     }
+    
+    public abstract Boolean comprar(int cantidad) throws EntradaLimiteException;
 }

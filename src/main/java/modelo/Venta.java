@@ -1,11 +1,13 @@
 package modelo;
 
+import java.util.Date;
+
 public class Venta {
 
-    private String fecha;
+    private Date fecha;
     private int monto;
 
-    public Venta(String fecha,
+    public Venta(Date fecha,
                  int monto) {
 
         this.fecha = fecha;

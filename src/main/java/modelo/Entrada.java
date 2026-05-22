@@ -19,7 +19,7 @@ public class Entrada {
         if (estado.equals("Vendido")) {
 
             throw new EntradaNoDisponibleException(
-                    "La entrada ya fue vendida");
+                    "Operación denegada: La entrada numero " + numero + " ya esta vendida.");
         }
 
         estado = "Vendido";
